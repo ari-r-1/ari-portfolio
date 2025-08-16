@@ -4,10 +4,10 @@ const WorkExperience = () => {
       role: 'Network Engineer',
       company: 'IBM',
       date: 'Jan 2014',
-      logo: '🔵', // IBM logo placeholder
+      logo: 'IBM', // IBM text logo
       responsibilities: [
         'Managed, tracked, and coordinated problem resolution and escalation processes',
-        'Initiated and managed network test facilities to verify network hardness and resilience',
+        'Initiated and managed network test facilities to verify network hardness and resilience', 
         'Monitored network capacity and performance to diagnose and resolve complex network problems',
         'Organized frameworks for transferring secure data from internal to external and public networks'
       ],
@@ -17,7 +17,7 @@ const WorkExperience = () => {
       role: 'Data Scientist',
       company: 'TechCorp',
       date: 'Mar 2018',
-      logo: '🔶', // TechCorp logo placeholder
+      logo: 'TC', // TechCorp abbreviation
       responsibilities: [
         'Developed machine learning models for predictive analytics across multiple business domains',
         'Implemented end-to-end data pipelines using Python, SQL, and cloud technologies',
@@ -29,8 +29,8 @@ const WorkExperience = () => {
     {
       role: 'ML Engineer',
       company: 'DataFlow Inc',
-      date: 'Sep 2020',
-      logo: '🟢', // DataFlow logo placeholder
+      date: 'Sep 2020', 
+      logo: 'DF', // DataFlow abbreviation
       responsibilities: [
         'Architected and deployed production-ready ML systems serving millions of users',
         'Optimized model performance and reduced inference latency by 40%',
@@ -43,7 +43,7 @@ const WorkExperience = () => {
       role: 'Senior ML Engineer',
       company: 'AI Innovations',
       date: 'Feb 2023',
-      logo: '🔴', // AI Innovations logo placeholder
+      logo: 'AI', // AI Innovations abbreviation
       responsibilities: [
         'Leading AI research initiatives and prototype development',
         'Designing scalable MLOps infrastructure for model deployment and monitoring',
@@ -81,22 +81,22 @@ const WorkExperience = () => {
                   exp.isLeft ? 'lg:flex-row-reverse' : 'lg:flex-row'
                 } flex-col lg:space-x-8`}
               >
-                {/* Timeline node */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-card rounded-full border-4 border-primary flex items-center justify-center z-10 shadow-lg shadow-primary/30">
-                  <span className="text-2xl">{exp.logo}</span>
+                {/* Timeline node with company logo */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-20 h-20 bg-white rounded-full border-4 border-white flex items-center justify-center z-10 shadow-xl">
+                  <span className="text-blue-600 font-bold text-sm">{exp.logo}</span>
                 </div>
 
-                {/* Date */}
-                <div className={`lg:w-1/2 ${exp.isLeft ? 'lg:text-right lg:pr-16' : 'lg:pl-16'} text-center lg:text-left mb-4 lg:mb-0`}>
-                  <span className="inline-block px-4 py-2 bg-secondary/20 text-secondary rounded-full text-sm font-semibold">
+                {/* Date label */}
+                <div className={`lg:w-1/2 ${exp.isLeft ? 'lg:text-right lg:pr-20' : 'lg:pl-20'} text-center lg:text-left mb-4 lg:mb-0 flex ${exp.isLeft ? 'lg:justify-end' : 'lg:justify-start'} justify-center items-center`}>
+                  <span className="text-white font-semibold text-lg">
                     {exp.date}
                   </span>
                 </div>
 
                 {/* Experience card */}
-                <div className={`lg:w-1/2 w-full ${exp.isLeft ? 'lg:pr-16' : 'lg:pl-16'}`}>
+                <div className={`lg:w-1/2 w-full ${exp.isLeft ? 'lg:pr-20' : 'lg:pl-20'}`}>
                   <div
-                    className="bg-card-dark rounded-xl p-6 border border-border hover:border-primary/50 transition-all duration-500 animate-slide-in-left shadow-lg hover:shadow-primary/20"
+                    className="bg-gradient-to-br from-slate-800 via-purple-900/30 to-slate-800 rounded-2xl p-8 border border-slate-600 hover:border-purple-400/50 transition-all duration-500 animate-slide-in-left shadow-2xl hover:shadow-purple-500/20"
                     style={{ animationDelay: `${index * 0.2}s` }}
                   >
                     <h3 className="text-xl font-bold text-foreground mb-2">

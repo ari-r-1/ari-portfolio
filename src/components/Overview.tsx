@@ -1,26 +1,26 @@
-import { Cpu, Code, Settings, Music } from 'lucide-react';
+import { Brain, Code2, Settings, Zap } from 'lucide-react';
 
 const Overview = () => {
   const roles = [
     {
       title: 'ML/AI Engineer',
-      icon: <Cpu className="w-8 h-8" />,
-      gradient: 'from-accent via-accent-purple to-accent-green'
+      icon: <Brain className="w-8 h-8" />,
+      gradient: 'from-cyan-400 via-purple-500 to-blue-500'
     },
     {
-      title: 'Python Developer',
-      icon: <Code className="w-8 h-8" />,
-      gradient: 'from-accent-purple via-accent to-accent-green'
+      title: 'Python Developer', 
+      icon: <Code2 className="w-8 h-8" />,
+      gradient: 'from-purple-500 via-pink-500 to-cyan-400'
     },
     {
       title: 'MLOps Engineer',
       icon: <Settings className="w-8 h-8" />,
-      gradient: 'from-accent-green via-accent-purple to-accent'
+      gradient: 'from-green-400 via-cyan-500 to-purple-500'
     },
     {
       title: 'Music Composer',
-      icon: <Music className="w-8 h-8" />,
-      gradient: 'from-accent via-accent-green to-accent-purple'
+      icon: <Zap className="w-8 h-8" />,
+      gradient: 'from-blue-500 via-purple-600 to-pink-500'
     }
   ];
 
@@ -46,31 +46,34 @@ const Overview = () => {
           {roles.map((role, index) => (
             <div
               key={index}
-              className="group relative bg-card-dark rounded-xl p-6 text-center neon-border hover:scale-105 transition-all duration-500 animate-scale-in cursor-pointer"
+              className="group relative bg-gradient-to-br from-slate-900 via-purple-900/50 to-slate-900 rounded-2xl p-8 text-center border border-cyan-500/30 hover:border-cyan-400/60 hover:scale-105 transition-all duration-500 animate-scale-in cursor-pointer overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Gradient border effect */}
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-r opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm" 
-                   style={{ background: `linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-purple)), hsl(var(--accent-green)))` }}>
+              {/* Gradient border glow effect */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r opacity-0 group-hover:opacity-30 transition-opacity duration-500 blur-xl" 
+                   style={{ background: `linear-gradient(135deg, #00f5ff, #8b5cf6, #06ffa5)` }}>
               </div>
               
               {/* Card content */}
-              <div className="relative z-10 bg-card-dark rounded-xl p-6 border border-border">
-                {/* Icon */}
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-lg bg-gradient-to-r ${role.gradient} mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <div className="text-foreground">
+              <div className="relative z-10">
+                {/* 3D Icon with geometric style */}
+                <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-r ${role.gradient} mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-500/30`}>
+                  <div className="text-white drop-shadow-lg">
                     {role.icon}
                   </div>
                 </div>
                 
                 {/* Title */}
-                <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
                   {role.title}
                 </h3>
               </div>
               
-              {/* Hover glow effect */}
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-accent/20 via-accent-purple/20 to-accent-green/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
+              {/* Background geometric pattern */}
+              <div className="absolute top-0 left-0 w-full h-full opacity-10 group-hover:opacity-20 transition-opacity duration-500">
+                <div className="absolute top-4 right-4 w-8 h-8 border border-cyan-400 rotate-45"></div>
+                <div className="absolute bottom-4 left-4 w-6 h-6 border border-purple-400 rotate-12"></div>
+              </div>
             </div>
           ))}
         </div>
