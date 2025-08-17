@@ -25,7 +25,7 @@ const Hero = () => {
       
       <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
         {/* Left side - Text content */}
-        <div className="space-y-8 animate-fade-in">
+        <div className="space-y-8 animate-fade-in delay-100">
           {/* Timeline indicator */}
           <div className="flex items-start space-x-4">
             <div className="flex flex-col items-center">
@@ -46,13 +46,13 @@ const Hero = () => {
         </div>
 
         {/* Right side - 3D Particle Hand */}
-        <div className="relative h-96 lg:h-[500px] flex items-center justify-center animate-slide-in-right">
+        <div className="relative h-96 lg:h-[500px] flex items-center justify-center animate-slide-in-right delay-300">
           <div className="relative w-80 h-80">
             {/* Particle hand visualization */}
             {particles.map((particle) => (
               <div
                 key={particle.id}
-                className="absolute w-2 h-2 bg-primary rounded-full shadow-lg shadow-primary/50"
+                className="absolute w-2 h-2 bg-primary rounded-full shadow-lg shadow-primary/50 transition-all duration-1000 ease-in-out animate-fade-in"
                 style={{
                   left: `${particle.x}px`,
                   top: `${particle.y}px`,
@@ -64,13 +64,13 @@ const Hero = () => {
             ))}
             
             {/* Central glow effect */}
-            <div className="absolute inset-0 bg-gradient-radial from-primary/20 via-primary/10 to-transparent rounded-full animate-pulse"></div>
+            <div className="absolute inset-0 bg-gradient-radial from-primary/20 via-primary/10 to-transparent rounded-full animate-pulse duration-3000 ease-in-out"></div>
           </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center animate-fade-in delay-1000">
         <Mouse className="w-6 h-6 text-muted-foreground mx-auto mb-2 scroll-indicator" />
         <p className="text-sm text-muted-foreground">Scroll to explore</p>
       </div>
