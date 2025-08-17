@@ -35,7 +35,7 @@ const Hero = () => {
             <div className="space-y-4 pt-1">
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
                 <span className="text-foreground">Hi, I'm </span>
-                <span className="text-primary glow-text">Arjun</span>
+                <span className="text-primary glow-text">Ari</span>
               </h1>
               <p className="text-xl lg:text-2xl text-muted-foreground font-light">
                 I humanize data
