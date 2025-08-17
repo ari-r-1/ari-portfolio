@@ -1,0 +1,87 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="enhanced-damask" x="0" y="0" width="400" height="400" patternUnits="userSpaceOnUse">
+      <!-- Dark background -->
+      <rect width="400" height="400" fill="#0d0d0d"/>
+      
+      <!-- Main ornate motifs -->
+      <g opacity="0.12">
+        <!-- Center ornament -->
+        <g transform="translate(200,200)">
+          <path d="M-80,-120 Q-40,-160 0,-120 Q40,-160 80,-120 Q60,-80 40,-40 Q80,0 40,40 Q60,80 80,120 Q40,160 0,120 Q-40,160 -80,120 Q-60,80 -40,40 Q-80,0 -40,-40 Q-60,-80 -80,-120 Z" fill="#1a1a1a" stroke="#222" stroke-width="1"/>
+          
+          <!-- Inner flourishes -->
+          <g>
+            <path d="M-60,-90 Q-30,-110 0,-90 Q30,-110 60,-90 Q45,-60 30,-30 Q60,0 30,30 Q45,60 60,90 Q30,110 0,90 Q-30,110 -60,90 Q-45,60 -30,30 Q-60,0 -30,-30 Q-45,-60 -60,-90 Z" fill="#222" opacity="0.8"/>
+            
+            <!-- Spiral elements -->
+            <circle cx="0" cy="-60" r="12" fill="#1a1a1a"/>
+            <circle cx="0" cy="60" r="12" fill="#1a1a1a"/>
+            <circle cx="-50" cy="0" r="10" fill="#1a1a1a"/>
+            <circle cx="50" cy="0" r="10" fill="#1a1a1a"/>
+            
+            <!-- Decorative curves -->
+            <path d="M-30,-90 Q0,-70 30,-90" stroke="#1a1a1a" stroke-width="3" fill="none"/>
+            <path d="M-30,90 Q0,70 30,90" stroke="#1a1a1a" stroke-width="3" fill="none"/>
+            <path d="M-70,-30 Q-50,0 -70,30" stroke="#1a1a1a" stroke-width="3" fill="none"/>
+            <path d="M70,-30 Q50,0 70,30" stroke="#1a1a1a" stroke-width="3" fill="none"/>
+            
+            <!-- Fine details -->
+            <g transform="rotate(45)">
+              <path d="M-100,-20 Q-90,-10 -100,0 Q-90,10 -100,20" stroke="#1a1a1a" stroke-width="2" fill="none"/>
+              <path d="M100,-20 Q90,-10 100,0 Q90,10 100,20" stroke="#1a1a1a" stroke-width="2" fill="none"/>
+              <path d="M-20,-100 Q-10,-90 0,-100 Q10,-90 20,-100" stroke="#1a1a1a" stroke-width="2" fill="none"/>
+              <path d="M-20,100 Q-10,90 0,100 Q10,90 20,100" stroke="#1a1a1a" stroke-width="2" fill="none"/>
+            </g>
+          </g>
+        </g>
+        
+        <!-- Corner ornaments -->
+        <g transform="translate(100,100)">
+          <path d="M40,40 Q80,20 120,40 Q100,80 80,120 Q40,100 40,60 Z" fill="#1a1a1a"/>
+          <path d="M-40,-40 Q-20,-80 20,-60 Q0,-20 -20,20 Q-60,0 -60,-40 Z" fill="#1a1a1a"/>
+        </g>
+        
+        <g transform="translate(300,100)">
+          <path d="M-40,40 Q-80,20 -120,40 Q-100,80 -80,120 Q-40,100 -40,60 Z" fill="#1a1a1a"/>
+          <path d="M40,-40 Q20,-80 -20,-60 Q0,-20 20,20 Q60,0 60,-40 Z" fill="#1a1a1a"/>
+        </g>
+        
+        <g transform="translate(100,300)">
+          <path d="M40,-40 Q80,-20 120,-40 Q100,-80 80,-120 Q40,-100 40,-60 Z" fill="#1a1a1a"/>
+          <path d="M-40,40 Q-20,80 20,60 Q0,20 -20,-20 Q-60,0 -60,40 Z" fill="#1a1a1a"/>
+        </g>
+        
+        <g transform="translate(300,300)">
+          <path d="M-40,-40 Q-80,-20 -120,-40 Q-100,-80 -80,-120 Q-40,-100 -40,-60 Z" fill="#1a1a1a"/>
+          <path d="M40,40 Q20,80 -20,60 Q0,20 20,-20 Q60,0 60,40 Z" fill="#1a1a1a"/>
+        </g>
+        
+        <!-- Connecting elements -->
+        <g>
+          <path d="M200,0 Q240,40 200,80 Q160,40 200,0" fill="#1a1a1a"/>
+          <path d="M200,320 Q240,360 200,400 Q160,360 200,320" fill="#1a1a1a"/>
+          <path d="M0,200 Q40,240 80,200 Q40,160 0,200" fill="#1a1a1a"/>
+          <path d="M320,200 Q360,240 400,200 Q360,160 320,200" fill="#1a1a1a"/>
+        </g>
+        
+        <!-- Additional ornate details -->
+        <g opacity="0.6">
+          <g transform="translate(200,100)">
+            <path d="M-20,-20 Q0,-30 20,-20 Q10,0 0,20 Q-10,0 -20,-20" fill="#1a1a1a"/>
+          </g>
+          <g transform="translate(200,300)">
+            <path d="M-20,20 Q0,30 20,20 Q10,0 0,-20 Q-10,0 -20,20" fill="#1a1a1a"/>
+          </g>
+          <g transform="translate(100,200)">
+            <path d="M-20,-20 Q-30,0 -20,20 Q0,10 20,0 Q0,-10 -20,-20" fill="#1a1a1a"/>
+          </g>
+          <g transform="translate(300,200)">
+            <path d="M20,-20 Q30,0 20,20 Q0,10 -20,0 Q0,-10 20,-20" fill="#1a1a1a"/>
+          </g>
+        </g>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#enhanced-damask)"/>
+</svg>
