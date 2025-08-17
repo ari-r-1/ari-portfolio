@@ -1,0 +1,51 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="damask" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+      <!-- Dark background -->
+      <rect width="200" height="200" fill="#0a0a0a"/>
+      
+      <!-- Central ornament -->
+      <g transform="translate(100,100)" opacity="0.15">
+        <!-- Main floral motif -->
+        <path d="M-40,-60 Q-20,-80 0,-60 Q20,-80 40,-60 Q30,-40 20,-20 Q40,0 20,20 Q30,40 40,60 Q20,80 0,60 Q-20,80 -40,60 Q-30,40 -20,20 Q-40,0 -20,-20 Q-30,-40 -40,-60 Z" fill="#333" stroke="#444" stroke-width="1"/>
+        
+        <!-- Inner decorative elements -->
+        <circle cx="0" cy="-30" r="8" fill="#444" opacity="0.8"/>
+        <circle cx="0" cy="30" r="8" fill="#444" opacity="0.8"/>
+        <circle cx="-25" cy="0" r="6" fill="#444" opacity="0.6"/>
+        <circle cx="25" cy="0" r="6" fill="#444" opacity="0.6"/>
+        
+        <!-- Curved decorative lines -->
+        <path d="M-15,-45 Q0,-35 15,-45" stroke="#444" stroke-width="2" fill="none" opacity="0.7"/>
+        <path d="M-15,45 Q0,35 15,45" stroke="#444" stroke-width="2" fill="none" opacity="0.7"/>
+        <path d="M-35,-15 Q-25,0 -35,15" stroke="#444" stroke-width="2" fill="none" opacity="0.7"/>
+        <path d="M35,-15 Q25,0 35,15" stroke="#444" stroke-width="2" fill="none" opacity="0.7"/>
+        
+        <!-- Small ornamental flourishes -->
+        <g transform="rotate(45)">
+          <path d="M-50,-10 Q-45,-5 -50,0 Q-45,5 -50,10" stroke="#333" stroke-width="1" fill="none" opacity="0.5"/>
+          <path d="M50,-10 Q45,-5 50,0 Q45,5 50,10" stroke="#333" stroke-width="1" fill="none" opacity="0.5"/>
+          <path d="M-10,-50 Q-5,-45 0,-50 Q5,-45 10,-50" stroke="#333" stroke-width="1" fill="none" opacity="0.5"/>
+          <path d="M-10,50 Q-5,45 0,50 Q5,45 10,50" stroke="#333" stroke-width="1" fill="none" opacity="0.5"/>
+        </g>
+      </g>
+      
+      <!-- Corner ornaments -->
+      <g opacity="0.08">
+        <path d="M20,20 Q40,10 60,20 Q50,40 40,60 Q20,50 20,30 Z" fill="#333"/>
+        <path d="M180,20 Q160,10 140,20 Q150,40 160,60 Q180,50 180,30 Z" fill="#333"/>
+        <path d="M20,180 Q40,190 60,180 Q50,160 40,140 Q20,150 20,170 Z" fill="#333"/>
+        <path d="M180,180 Q160,190 140,180 Q150,160 160,140 Q180,150 180,170 Z" fill="#333"/>
+      </g>
+      
+      <!-- Subtle connecting elements -->
+      <g opacity="0.06">
+        <path d="M100,0 Q120,20 100,40 Q80,20 100,0" fill="#333"/>
+        <path d="M100,160 Q120,180 100,200 Q80,180 100,160" fill="#333"/>
+        <path d="M0,100 Q20,120 40,100 Q20,80 0,100" fill="#333"/>
+        <path d="M160,100 Q180,120 200,100 Q180,80 160,100" fill="#333"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#damask)"/>
+</svg>

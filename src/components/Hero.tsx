@@ -20,9 +20,13 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-hero-pattern relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden" style={{
+      backgroundImage: 'url(/damask-pattern.svg)',
+      backgroundRepeat: 'repeat',
+      backgroundSize: '200px 200px'
+    }}>
       {/* Background overlay */}
-      <div className="absolute inset-0 bg-background/90"></div>
+      <div className="absolute inset-0 bg-background/60"></div>
       
       <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
         {/* Left side - Text content */}
