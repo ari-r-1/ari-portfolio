@@ -14,7 +14,7 @@ const Header = () => {
       <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo/Brand */}
         <div className="text-xl font-bold">
-          <span className="text-foreground">Arjun</span>
+          <span className="text-foreground">Ari</span>
           <span className="text-muted-foreground mx-2">|</span>
           <span className="text-primary glow-text">Data Scientist</span>
         </div>
