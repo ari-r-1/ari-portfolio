@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Mouse } from 'lucide-react';
+import WireframeHand from './WireframeHand';
 
 const Hero = () => {
   const [particles, setParticles] = useState<Array<{ id: number; x: number; y: number; delay: number }>>([]);
@@ -45,27 +46,9 @@ const Hero = () => {
 
         </div>
 
-        {/* Right side - 3D Particle Hand */}
+        {/* Right side - 3D Wireframe Hand */}
         <div className="relative h-96 lg:h-[500px] flex items-center justify-center animate-slide-in-right delay-300">
-          <div className="relative w-80 h-80">
-            {/* Particle hand visualization */}
-            {particles.map((particle) => (
-              <div
-                key={particle.id}
-                className="absolute w-2 h-2 bg-primary rounded-full shadow-lg shadow-primary/50 transition-all duration-1000 ease-in-out animate-fade-in"
-                style={{
-                  left: `${particle.x}px`,
-                  top: `${particle.y}px`,
-                  animationDelay: `${particle.delay}s`
-                }}
-              >
-                <div className="w-full h-full bg-primary-glow rounded-full animate-particle-float opacity-80"></div>
-              </div>
-            ))}
-            
-            {/* Central glow effect */}
-            <div className="absolute inset-0 bg-gradient-radial from-primary/20 via-primary/10 to-transparent rounded-full animate-pulse duration-3000 ease-in-out"></div>
-          </div>
+          <WireframeHand />
         </div>
       </div>
 
