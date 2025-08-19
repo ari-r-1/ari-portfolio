@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Mouse } from 'lucide-react';
 import WireframeHand from './WireframeHand';
+import AnimatedBackground from './AnimatedBackground';
 
 const Hero = () => {
   const [particles, setParticles] = useState<Array<{ id: number; x: number; y: number; delay: number }>>([]);
@@ -27,6 +28,9 @@ const Hero = () => {
     }}>
       {/* Background overlay */}
       <div className="absolute inset-0 bg-background/30"></div>
+      
+      {/* Animated neural network background */}
+      <AnimatedBackground />
       
       <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
         {/* Left side - Text content */}
