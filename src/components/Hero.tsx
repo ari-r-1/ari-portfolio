@@ -20,13 +20,19 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden" style={{
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black" style={{
       backgroundImage: 'url(/enhanced-damask.svg)',
       backgroundRepeat: 'repeat',
-      backgroundSize: '400px 400px'
+      backgroundSize: '300px 300px'
     }}>
-      {/* Background overlay */}
-      <div className="absolute inset-0 bg-background/30"></div>
+      {/* Premium black overlay with subtle gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-black/95 to-gray-900/80"></div>
+      
+      {/* Additional luxury texture layer */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/3 to-transparent"></div>
+      </div>
       
       <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
         {/* Left side - Text content */}

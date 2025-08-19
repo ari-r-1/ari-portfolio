@@ -6,9 +6,9 @@
 
 @layer base {
   :root {
-    /* Core Colors */
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    /* Core Colors - Premium Black */
+    --background: 0 0% 2%;
+    --foreground: 0 0% 98%;
 
     /* Card System */
     --card: 240 5% 8%;
