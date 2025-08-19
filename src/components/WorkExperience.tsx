@@ -19,58 +19,6 @@ const WorkExperience = () => {
         '20% increase in conversion rates'
       ],
       isLeft: true
-    },
-    {
-      role: 'Network Engineer',
-      company: 'IBM',
-      date: 'Jan 2014',
-      logo: 'IBM', // IBM text logo
-      responsibilities: [
-        'Managed, tracked, and coordinated problem resolution and escalation processes',
-        'Initiated and managed network test facilities to verify network hardness and resilience', 
-        'Monitored network capacity and performance to diagnose and resolve complex network problems',
-        'Organized frameworks for transferring secure data from internal to external and public networks'
-      ],
-      isLeft: false
-    },
-    {
-      role: 'Data Scientist',
-      company: 'TechCorp',
-      date: 'Mar 2018',
-      logo: 'TC', // TechCorp abbreviation
-      responsibilities: [
-        'Developed machine learning models for predictive analytics across multiple business domains',
-        'Implemented end-to-end data pipelines using Python, SQL, and cloud technologies',
-        'Collaborated with cross-functional teams to translate business requirements into technical solutions',
-        'Led workshops on data science best practices and MLOps implementation'
-      ],
-      isLeft: true
-    },
-    {
-      role: 'ML Engineer',
-      company: 'DataFlow Inc',
-      date: 'Sep 2020', 
-      logo: 'DF', // DataFlow abbreviation
-      responsibilities: [
-        'Architected and deployed production-ready ML systems serving millions of users',
-        'Optimized model performance and reduced inference latency by 40%',
-        'Built automated model monitoring and retraining pipelines',
-        'Mentored junior data scientists and established ML engineering standards'
-      ],
-      isLeft: false
-    },
-    {
-      role: 'Senior ML Engineer',
-      company: 'AI Innovations',
-      date: 'Feb 2023',
-      logo: 'AI', // AI Innovations abbreviation
-      responsibilities: [
-        'Leading AI research initiatives and prototype development',
-        'Designing scalable MLOps infrastructure for model deployment and monitoring',
-        'Collaborating with product teams to integrate AI capabilities into customer-facing applications',
-        'Contributing to open-source ML tools and participating in industry conferences'
-      ],
-      isLeft: true
     }
   ];
 
