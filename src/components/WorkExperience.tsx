@@ -1,6 +1,26 @@
 const WorkExperience = () => {
   const experiences = [
     {
+      role: 'Software Engineer',
+      company: 'Genxlead Solutions Pvt Ltd',
+      date: 'Apr 2022 – Oct 2024',
+      duration: '2.5 Years Experience',
+      location: 'Chennai, India',
+      logo: 'GS', // Genxlead Solutions abbreviation
+      responsibilities: [
+        'Gained hands-on experience working with data analysis, problem-solving, email marketing and implementing data-driven solutions',
+        'Contributed to projects that enhanced business operations by identifying key insights, improving efficiency, and supporting decision-making processes',
+        'Worked closely with cross-functional teams to deliver high-quality results and continuously improve workflows',
+        'Designed, implemented and optimized email marketing campaigns targeting different customer segments'
+      ],
+      achievements: [
+        '30% increase in email open rates',
+        '25% boost in click-through rates (CTR)', 
+        '20% increase in conversion rates'
+      ],
+      isLeft: true
+    },
+    {
       role: 'Network Engineer',
       company: 'IBM',
       date: 'Jan 2014',
@@ -11,7 +31,7 @@ const WorkExperience = () => {
         'Monitored network capacity and performance to diagnose and resolve complex network problems',
         'Organized frameworks for transferring secure data from internal to external and public networks'
       ],
-      isLeft: true
+      isLeft: false
     },
     {
       role: 'Data Scientist',
@@ -24,7 +44,7 @@ const WorkExperience = () => {
         'Collaborated with cross-functional teams to translate business requirements into technical solutions',
         'Led workshops on data science best practices and MLOps implementation'
       ],
-      isLeft: false
+      isLeft: true
     },
     {
       role: 'ML Engineer',
@@ -37,7 +57,7 @@ const WorkExperience = () => {
         'Built automated model monitoring and retraining pipelines',
         'Mentored junior data scientists and established ML engineering standards'
       ],
-      isLeft: true
+      isLeft: false
     },
     {
       role: 'Senior ML Engineer',
@@ -50,7 +70,7 @@ const WorkExperience = () => {
         'Collaborating with product teams to integrate AI capabilities into customer-facing applications',
         'Contributing to open-source ML tools and participating in industry conferences'
       ],
-      isLeft: false
+      isLeft: true
     }
   ];
 
@@ -102,17 +122,40 @@ const WorkExperience = () => {
                     <h3 className="text-xl font-bold text-foreground mb-2">
                       {exp.role}
                     </h3>
-                    <p className="text-muted-foreground mb-4 font-medium">
+                    <p className="text-muted-foreground mb-2 font-medium">
                       {exp.company}
                     </p>
-                    <ul className="space-y-2">
-                      {exp.responsibilities.map((responsibility, idx) => (
-                        <li key={idx} className="text-muted-foreground text-sm flex items-start">
-                          <span className="text-primary mr-2 mt-1">•</span>
-                          {responsibility}
-                        </li>
-                      ))}
-                    </ul>
+                    {exp.duration && (
+                      <p className="text-sm text-accent mb-2">
+                        {exp.duration} {exp.location && `• ${exp.location}`}
+                      </p>
+                    )}
+                    
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-secondary mb-2">Key Responsibilities</h4>
+                      <ul className="space-y-2">
+                        {exp.responsibilities.map((responsibility, idx) => (
+                          <li key={idx} className="text-muted-foreground text-sm flex items-start">
+                            <span className="text-primary mr-2 mt-1">•</span>
+                            {responsibility}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {exp.achievements && (
+                      <div>
+                        <h4 className="text-sm font-semibold text-accent-green mb-2">Key Achievements</h4>
+                        <ul className="space-y-1">
+                          {exp.achievements.map((achievement, idx) => (
+                            <li key={idx} className="text-muted-foreground text-sm flex items-start">
+                              <span className="text-accent-green mr-2 mt-1">✓</span>
+                              {achievement}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
