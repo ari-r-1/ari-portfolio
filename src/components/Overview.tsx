@@ -3,23 +3,23 @@ import { Brain, Code2, Settings, Zap } from 'lucide-react';
 const Overview = () => {
   const roles = [
     {
-      title: 'ML/AI Engineer',
-      icon: <Brain className="w-8 h-8" />,
+      title: 'Email Marketing Executive',
+      icon: <Zap className="w-8 h-8" />,
       gradient: 'from-cyan-400 via-purple-500 to-blue-500'
     },
     {
-      title: 'Python Developer', 
-      icon: <Code2 className="w-8 h-8" />,
+      title: 'Data Analyst', 
+      icon: <Settings className="w-8 h-8" />,
       gradient: 'from-purple-500 via-pink-500 to-cyan-400'
     },
     {
-      title: 'MLOps Engineer',
-      icon: <Settings className="w-8 h-8" />,
+      title: 'Junior Data Scientist',
+      icon: <Code2 className="w-8 h-8" />,
       gradient: 'from-green-400 via-cyan-500 to-purple-500'
     },
     {
-      title: 'Music Composer',
-      icon: <Zap className="w-8 h-8" />,
+      title: 'ML/AI Engineer',
+      icon: <Brain className="w-8 h-8" />,
       gradient: 'from-blue-500 via-purple-600 to-pink-500'
     }
   ];
