@@ -1,23 +1,25 @@
-import satoriImage from '@/assets/satori-project.jpg';
-import neuralQImage from '@/assets/neural-q-project.jpg';
-import nexoolImage from '@/assets/nexool-project.jpg';
 
 const Projects = () => {
   const projects = [
     {
-      title: 'Satori',
-      image: satoriImage,
-      description: 'Mobile analytics platform with predictive insights'
+      title: 'Currency Converter Web App',
+      description: 'Flask-based web application for real-time currency conversion with interactive UI',
+      githubUrl: 'https://github.com/ari-r-1/currency-converter-flask-based'
     },
     {
-      title: 'Neural Q',
-      image: neuralQImage,
-      description: 'AI-powered neural network visualization tool'
+      title: 'Email Duplicate Cleaner Web App',
+      description: 'Web application to identify and remove duplicate emails with automated cleaning algorithms',
+      githubUrl: 'https://github.com/ari-r-1/email-duplicate-cleaner'
     },
     {
-      title: 'Nexool',
-      image: nexoolImage,
-      description: 'Educational platform with adaptive learning algorithms'
+      title: 'Chronic Kidney Disease Prediction (CKDP)',
+      description: 'Machine learning model for early detection and prediction of chronic kidney disease',
+      githubUrl: 'https://github.com/ari-r-1/ckd-prediction'
+    },
+    {
+      title: 'Data Extraction And NLP Text Analysis',
+      description: 'Advanced NLP pipeline for extracting insights and performing comprehensive text analysis',
+      githubUrl: 'https://github.com/ari-r-1/data-extraction-and-NLP-text-analysis-'
     }
   ];
 
@@ -46,29 +48,20 @@ const Projects = () => {
               key={index}
               className="group bg-card-dark rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-primary/20 cursor-pointer animate-scale-in"
               style={{ animationDelay: `${index * 0.1}s` }}
+              onClick={() => window.open(project.githubUrl, '_blank')}
             >
-              {/* Project image */}
-              <div className="relative overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-card-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-
               {/* Project content */}
-              <div className="p-6">
+              <div className="p-6 h-full flex flex-col">
                 <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
                   {project.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
                   {project.description}
                 </p>
                 
-                {/* Hover indicator */}
+                {/* GitHub link indicator */}
                 <div className="mt-4 flex items-center text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-sm font-medium">View Project</span>
+                  <span className="text-sm font-medium">View on GitHub</span>
                   <svg className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
