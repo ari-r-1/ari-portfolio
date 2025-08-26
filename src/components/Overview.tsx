@@ -36,8 +36,8 @@ const Overview = () => {
             Overview
           </h2>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Developer turned Machine Learning Engineer, I tailor and implement data driven solutions to help breakthrough domains. 
-            My passion of maths backing ML/AI helps me design solutions that are just right.
+            Software Engineer with expertise in data analysis and email marketing automation. I design and implement 
+            data-driven solutions that enhance business operations and drive measurable results through strategic insights.
           </p>
         </div>
 
