@@ -36,8 +36,11 @@ const Overview = () => {
             Overview
           </h2>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Software Engineer with expertise in data analysis and email marketing automation. I design and implement 
-            data-driven solutions that enhance business operations and drive measurable results through strategic insights.
+            As a Junior Data Scientist and Analytics Expert, I bring a strong foundation in data science, statistical analysis, and business intelligence. With a background in Python, SQL, and data visualization tools like Tableau and Power BI, I have successfully turned raw data into meaningful insights. My academic and project experience includes working with supervised and unsupervised machine learning models, A/B testing, and hypothesis-driven analysis to support data-informed decisions.
+            <br /><br />
+            I specialize in data cleaning, feature engineering, and building predictive models to uncover patterns and trends. My ability to interpret complex datasets and communicate insights clearly helps bridge the gap between technical analysis and strategic decision-making. Additionally, I am familiar with tools such as Excel, Pandas, Scikit-learn, and Jupyter Notebooks, and have experience working with relational databases and large datasets in real-world scenarios.
+            <br /><br />
+            Driven by curiosity and continuous learning, I stay up-to-date with the latest developments in AI, analytics, and cloud platforms like AWS and Google Big Query. I thrive in collaborative environments where data is used to solve business challenges and enhance performance. With a keen eye for detail and a passion for solving problems, I am eager to contribute to impactful data science and analytics initiatives.
           </p>
         </div>
 
