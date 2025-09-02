@@ -57,75 +57,9 @@ const Contact = () => {
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-          {/* Left side - Contact form */}
-          <div className="animate-slide-in-left">
-            <div className="bg-card-dark rounded-xl p-8 border border-border shadow-xl">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="space-y-2">
-                  <Label htmlFor="name" className="text-foreground font-medium">
-                    Your Name
-                  </Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    type="text"
-                    placeholder="What's your name?"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    className="bg-input border-border focus:border-primary focus:ring-primary/20 text-foreground placeholder:text-muted-foreground"
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="email" className="text-foreground font-medium">
-                    Your Email
-                  </Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="What's your email?"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className="bg-input border-border focus:border-primary focus:ring-primary/20 text-foreground placeholder:text-muted-foreground"
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="message" className="text-foreground font-medium">
-                    Your Message
-                  </Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    placeholder="What do you want to say?"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    className="bg-input border-border focus:border-primary focus:ring-primary/20 text-foreground placeholder:text-muted-foreground min-h-[120px] resize-none"
-                    required
-                  />
-                </div>
-
-                <Button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-primary to-primary-glow hover:from-primary-glow hover:to-primary text-primary-foreground font-semibold py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-primary/30"
-                >
-                  Send Message
-                  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                  </svg>
-                </Button>
-              </form>
-            </div>
-          </div>
-
-          {/* Right side - Social links and contact info */}
-          <div className="animate-slide-in-right space-y-8">
-            {/* Social Links */}
-            <div className="bg-card-dark rounded-xl p-8 border border-border shadow-xl">
+        <div className="max-w-2xl mx-auto">
+          {/* Social Links */}
+          <div className="bg-card-dark rounded-xl p-8 border border-border shadow-xl">
               <h3 className="text-2xl font-bold text-foreground mb-6">Connect With Me</h3>
               <div className="space-y-4">
                 <a
@@ -176,9 +110,8 @@ const Contact = () => {
                     <p className="text-muted-foreground text-sm">ariranalyst@gmail.com</p>
                   </div>
                 </a>
-              </div>
             </div>
-        </div>
+          </div>
         </div>
       </div>
     </section>
