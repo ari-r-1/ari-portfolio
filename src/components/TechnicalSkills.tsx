@@ -42,22 +42,19 @@ const TechnicalSkills = () => {
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="grid gap-4 animate-slide-in-up">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 animate-slide-in-up">
             {skills.map((skill, index) => (
               <div 
                 key={index}
-                className="group animate-fade-in-up"
+                className="group animate-fade-in-up flex items-start space-x-3 p-4 bg-card-dark rounded-lg border border-border hover:border-primary/50 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-primary/20"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <Badge 
-                  variant="secondary" 
-                  className="text-sm py-3 px-6 bg-card-dark border border-border hover:border-primary/50 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-primary/20 text-foreground w-full justify-start"
-                >
-                  <span className="text-primary font-semibold mr-2">
-                    {String(index + 1).padStart(2, '0')}.
-                  </span>
+                <span className="text-primary font-bold text-lg flex-shrink-0 mt-1">
+                  {String(index + 1).padStart(2, '0')}.
+                </span>
+                <span className="text-foreground text-sm leading-relaxed">
                   {skill}
-                </Badge>
+                </span>
               </div>
             ))}
           </div>
