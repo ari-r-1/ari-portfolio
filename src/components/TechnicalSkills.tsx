@@ -46,7 +46,7 @@ const TechnicalSkills = () => {
             {skills.map((skill, index) => (
               <div 
                 key={index}
-                className="group animate-fade-in-up p-4 bg-card-dark rounded-lg border border-border hover:border-primary/50 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-primary/20"
+                className="group animate-fade-in-up p-4 bg-gradient-to-br from-slate-800 via-purple-900/30 to-slate-800 rounded-lg border border-slate-600 hover:border-purple-400/50 transition-all duration-500 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <span className="text-foreground text-sm leading-relaxed">
