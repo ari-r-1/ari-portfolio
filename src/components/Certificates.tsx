@@ -45,15 +45,15 @@ const Certificates = () => {
             return (
               <div
                 key={index}
-                className="group bg-card-dark rounded-xl p-6 border border-border hover:border-primary/50 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-primary/20 animate-scale-in"
+                className="group bg-gradient-to-br from-slate-800 via-purple-900/30 to-slate-800 rounded-xl p-6 border border-slate-600 hover:border-purple-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20 animate-scale-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors duration-300">
-                    <IconComponent className="w-6 h-6 text-primary" />
+                  <div className="p-3 bg-purple-900/20 rounded-lg group-hover:bg-purple-800/30 transition-colors duration-300">
+                    <IconComponent className="w-6 h-6 text-purple-400" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                    <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-purple-400 transition-colors duration-300">
                       {cert.title}
                     </h3>
                     <p className="text-muted-foreground text-sm">
