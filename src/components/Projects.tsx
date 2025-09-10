@@ -46,7 +46,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group bg-card-dark rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-primary/20 cursor-pointer animate-scale-in"
+              className="group bg-gradient-to-br from-slate-800 via-purple-900/30 to-slate-800 rounded-2xl overflow-hidden border border-slate-600 hover:border-purple-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20 cursor-pointer animate-scale-in"
               style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => window.open(project.githubUrl, '_blank')}
             >
