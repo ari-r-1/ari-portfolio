@@ -25,17 +25,17 @@ const Overview = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-background">
-      <div className="container mx-auto px-6">
+    <section id="about" className="py-16 sm:py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Section header */}
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
           <p className="text-secondary uppercase text-sm font-semibold tracking-wider mb-4">
             INTRODUCTION
           </p>
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-8">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 sm:mb-8">
             Overview
           </h2>
-          <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4">
             As a Junior Data Scientist and Analytics Expert, I bring a strong foundation in data science, statistical analysis, and business intelligence. With a background in Python, SQL, and data visualization tools like Tableau and Power BI, I have successfully turned raw data into meaningful insights. My academic and project experience includes working with supervised and unsupervised machine learning models, A/B testing, and hypothesis-driven analysis to support data-informed decisions.
             <br /><br />
             I specialize in data cleaning, feature engineering, and building predictive models to uncover patterns and trends. My ability to interpret complex datasets and communicate insights clearly helps bridge the gap between technical analysis and strategic decision-making. Additionally, I am familiar with tools such as Excel, Pandas, Scikit-learn, and Jupyter Notebooks, and have experience working with relational databases and large datasets in real-world scenarios.
@@ -45,7 +45,7 @@ const Overview = () => {
         </div>
 
         {/* Role cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {roles.map((role, index) => (
             <div
               key={index}

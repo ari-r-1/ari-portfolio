@@ -34,21 +34,21 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/3 to-transparent"></div>
       </div>
       
-      <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
         {/* Left side - Text content */}
-        <div className="space-y-8 animate-fade-in delay-100">
+        <div className="space-y-6 sm:space-y-8 animate-fade-in delay-100 text-center lg:text-left">
           {/* Timeline indicator */}
-          <div className="flex items-start space-x-4">
+          <div className="flex items-start space-x-4 justify-center lg:justify-start">
             <div className="flex flex-col items-center">
-              <div className="w-4 h-4 rounded-full bg-primary shadow-lg shadow-primary/50 animate-glow-pulse"></div>
-              <div className="w-0.5 h-20 bg-gradient-to-b from-primary to-transparent mt-2"></div>
+              <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-primary shadow-lg shadow-primary/50 animate-glow-pulse"></div>
+              <div className="w-0.5 h-16 sm:h-20 bg-gradient-to-b from-primary to-transparent mt-2"></div>
             </div>
-            <div className="space-y-4 pt-1">
-              <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+            <div className="space-y-3 sm:space-y-4 pt-1">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight">
                 <span className="text-foreground">Hi, I'm </span>
                 <span className="text-primary glow-text">Ari</span>
               </h1>
-              <p className="text-xl lg:text-2xl text-muted-foreground font-light">
+              <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground font-light">
                 I humanize data
               </p>
             </div>
@@ -57,7 +57,7 @@ const Hero = () => {
         </div>
 
         {/* Right side - 3D Wireframe Hand */}
-        <div className="relative h-96 lg:h-[500px] flex items-center justify-center animate-slide-in-right delay-300">
+        <div className="relative h-64 sm:h-80 md:h-96 lg:h-[500px] flex items-center justify-center animate-slide-in-right delay-300 mt-8 lg:mt-0">
           <WireframeHand />
         </div>
       </div>
