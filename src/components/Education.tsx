@@ -4,7 +4,7 @@ const Education = () => {
       degree: 'BE - ECE',
       institution: 'Selvam College Of Technology',
       date: '2017 – 2021',
-      location: 'Namakkal, India',
+      location: 'Namakkal, TamilNadu, India',
       grade: 'CGPA - 8.09',
       logo: 'SCT',
       isLeft: true
@@ -13,7 +13,7 @@ const Education = () => {
       degree: 'HSC',
       institution: 'Government Boys Higher Secondary School',
       date: '2016 – 2017',
-      location: 'Erode, India',
+      location: 'Erode, TamilNadu, India',
       grade: '1122/1200',
       logo: 'GBHSS',
       isLeft: false
@@ -22,7 +22,7 @@ const Education = () => {
       degree: 'SSLC',
       institution: 'Government Boys Higher Secondary School',
       date: '2014 – 2015',
-      location: 'Erode, India',
+      location: 'Erode, TamilNadu, India',
       grade: '451/500',
       logo: 'GBHSS',
       isLeft: true
