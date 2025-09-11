@@ -36,11 +36,7 @@ const Overview = () => {
             Overview
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4">
-            As a Junior Data Scientist and Analytics Expert, I bring a strong foundation in data science, statistical analysis, and business intelligence. With a background in Python, SQL, and data visualization tools like Tableau and Power BI, I have successfully turned raw data into meaningful insights. My academic and project experience includes working with supervised and unsupervised machine learning models, A/B testing, and hypothesis-driven analysis to support data-informed decisions.
-            <br /><br />
-            I specialize in data cleaning, feature engineering, and building predictive models to uncover patterns and trends. My ability to interpret complex datasets and communicate insights clearly helps bridge the gap between technical analysis and strategic decision-making. Additionally, I am familiar with tools such as Excel, Pandas, Scikit-learn, and Jupyter Notebooks, and have experience working with relational databases and large datasets in real-world scenarios.
-            <br /><br />
-            Driven by curiosity and continuous learning, I stay up-to-date with the latest developments in AI, analytics, and cloud platforms like AWS and Google Big Query. I thrive in collaborative environments where data is used to solve business challenges and enhance performance. With a keen eye for detail and a passion for solving problems, I am eager to contribute to impactful data science and analytics initiatives.
+            I am a Junior Data Scientist and Analytics Enthusiast with a strong foundation in Python, SQL, and data visualization using Tableau and Power BI. I specialize in cleaning data, feature engineering, and building predictive models to uncover trends and patterns. My experience spans supervised and unsupervised machine learning, A/B testing, and hypothesis-driven analysis to support data-informed decisions. I enjoy translating complex datasets into clear insights that drive business strategies. Skilled in tools like Excel, Pandas, Scikit-learn, and Jupyter, I have worked with large datasets and relational databases in real-world scenarios. I also stay updated on the latest in AI, analytics, and cloud platforms like AWS and BigQuery. Curious, detail-oriented, and collaborative, I am eager to contribute to impactful data science initiatives.
           </p>
         </div>
 
