@@ -42,16 +42,16 @@ const Projects = () => {
         </div>
 
         {/* Projects grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group bg-gradient-to-br from-slate-800 via-purple-900/30 to-slate-800 rounded-2xl overflow-hidden border border-slate-600 hover:border-purple-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20 cursor-pointer animate-scale-in"
+              className="group bg-gradient-to-br from-slate-800 via-purple-900/30 to-slate-800 rounded-2xl overflow-hidden border border-slate-600 hover:border-purple-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20 cursor-pointer animate-scale-in touch-manipulation"
               style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => window.open(project.githubUrl, '_blank')}
             >
               {/* Project content */}
-              <div className="p-6 h-full flex flex-col">
+              <div className="p-4 md:p-6 h-full flex flex-col">
                 <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
                   {project.title}
                 </h3>

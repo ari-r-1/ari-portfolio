@@ -40,7 +40,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-foreground hover:text-primary p-2"
+            className="md:hidden text-foreground hover:text-primary p-3 touch-manipulation min-h-[44px] min-w-[44px] flex items-center justify-center"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -52,12 +52,12 @@ const Header = () => {
         {/* Mobile Navigation Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-border">
-            <div className="flex flex-col space-y-4 pt-4">
+            <div className="flex flex-col space-y-2 pt-4">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className={`text-foreground hover:text-primary transition-colors duration-300 ${
+                  className={`text-foreground hover:text-primary transition-colors duration-300 py-3 px-2 block touch-manipulation min-h-[44px] flex items-center ${
                     activeLink === link.href ? 'text-primary' : ''
                   }`}
                   onClick={() => {

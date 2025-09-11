@@ -42,11 +42,11 @@ const TechnicalSkills = () => {
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 animate-slide-in-up">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 animate-slide-in-up">
             {skills.map((skill, index) => (
               <div 
                 key={index}
-                className="group animate-fade-in-up p-4 bg-gradient-to-br from-slate-800 via-purple-900/30 to-slate-800 rounded-lg border border-slate-600 hover:border-purple-400/50 transition-all duration-500 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20"
+                className="group animate-fade-in-up p-4 md:p-6 bg-gradient-to-br from-slate-800 via-purple-900/30 to-slate-800 rounded-lg border border-slate-600 hover:border-purple-400/50 transition-all duration-500 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 touch-manipulation"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <span className="text-foreground text-sm leading-relaxed">
