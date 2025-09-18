@@ -1,45 +1,55 @@
 
+import { Badge } from '@/components/ui/badge';
+
 const Projects = () => {
   const projects = [
     {
       title: 'Currency Converter Web App',
       description: 'Flask-based web application for real-time currency conversion with interactive UI',
-      githubUrl: 'https://github.com/ari-r-1/currency-converter-flask-based'
+      githubUrl: 'https://github.com/ari-r-1/currency-converter-flask-based',
+      tags: ['Web-based', 'Finance']
     },
     {
       title: 'Email Duplicate Cleaner Web App',
       description: 'Web application to identify and remove duplicate emails with automated cleaning algorithms',
-      githubUrl: 'https://github.com/ari-r-1/email-duplicate-cleaner'
+      githubUrl: 'https://github.com/ari-r-1/email-duplicate-cleaner',
+      tags: ['Web-based', 'Automation']
     },
     {
       title: 'Chronic Kidney Disease Prediction (CKDP)',
       description: 'Machine learning model for early detection and prediction of chronic kidney disease',
-      githubUrl: 'https://github.com/ari-r-1/ckd-prediction'
+      githubUrl: 'https://github.com/ari-r-1/ckd-prediction',
+      tags: ['ML', 'Healthcare']
     },
     {
       title: 'Data Extraction And NLP Text Analysis',
       description: 'Advanced NLP pipeline for extracting insights and performing comprehensive text analysis',
-      githubUrl: 'https://github.com/ari-r-1/data-extraction-and-NLP-text-analysis-'
+      githubUrl: 'https://github.com/ari-r-1/data-extraction-and-NLP-text-analysis-',
+      tags: ['NLP', 'ML', 'Analytics']
     },
     {
       title: 'Home Loan Default Prediction',
       description: 'Machine learning model for predicting home loan default risk and supporting risk management decisions',
-      githubUrl: 'https://github.com/ari-r-1/HomeLoan_Default-Risk_Management'
+      githubUrl: 'https://github.com/ari-r-1/HomeLoan_Default-Risk_Management',
+      tags: ['ML', 'Finance']
     },
     {
       title: 'Skin Disorder Prediction',
       description: 'AI-powered diagnostic tool for predicting and classifying various skin disorders using machine learning',
-      githubUrl: 'https://github.com/ari-r-1/SkinDisorder_Prediction'
+      githubUrl: 'https://github.com/ari-r-1/SkinDisorder_Prediction',
+      tags: ['ML', 'Healthcare']
     },
     {
       title: 'Flight Price Prediction',
       description: 'Predictive analytics model for forecasting flight prices based on various factors and market trends',
-      githubUrl: 'https://github.com/ari-r-1/FlightPrice_Prediction'
+      githubUrl: 'https://github.com/ari-r-1/FlightPrice_Prediction',
+      tags: ['ML', 'Travel']
     },
     {
       title: 'Portuguese Bank Marketing Prediction',
       description: 'Machine learning analysis for predicting customer response to Portuguese bank marketing campaigns',
-      githubUrl: 'https://github.com/ari-r-1/Portuguese_Bank_Marketing_Analysis'
+      githubUrl: 'https://github.com/ari-r-1/Portuguese_Bank_Marketing_Analysis',
+      tags: ['ML', 'Finance']
     }
   ];
 
@@ -75,9 +85,18 @@ const Projects = () => {
                 <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
                   {project.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
+                <p className="text-muted-foreground text-sm leading-relaxed flex-grow mb-3">
                   {project.description}
                 </p>
+                
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tags.map((tag, tagIndex) => (
+                    <Badge key={tagIndex} variant="secondary" className="text-xs">
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
                 
                 {/* GitHub link indicator */}
                 <div className="mt-4 flex items-center text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300">
