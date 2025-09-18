@@ -20,6 +20,26 @@ const Projects = () => {
       title: 'Data Extraction And NLP Text Analysis',
       description: 'Advanced NLP pipeline for extracting insights and performing comprehensive text analysis',
       githubUrl: 'https://github.com/ari-r-1/data-extraction-and-NLP-text-analysis-'
+    },
+    {
+      title: 'Home Loan Default Prediction',
+      description: 'Machine learning model for predicting home loan default risk and supporting risk management decisions',
+      githubUrl: 'https://github.com/ari-r-1/HomeLoan_Default-Risk_Management'
+    },
+    {
+      title: 'Skin Disorder Prediction',
+      description: 'AI-powered diagnostic tool for predicting and classifying various skin disorders using machine learning',
+      githubUrl: 'https://github.com/ari-r-1/SkinDisorder_Prediction'
+    },
+    {
+      title: 'Flight Price Prediction',
+      description: 'Predictive analytics model for forecasting flight prices based on various factors and market trends',
+      githubUrl: 'https://github.com/ari-r-1/FlightPrice_Prediction'
+    },
+    {
+      title: 'Portuguese Bank Marketing Prediction',
+      description: 'Machine learning analysis for predicting customer response to Portuguese bank marketing campaigns',
+      githubUrl: 'https://github.com/ari-r-1/Portuguese_Bank_Marketing_Analysis'
     }
   ];
 
