@@ -2,6 +2,19 @@
 import { Badge } from '@/components/ui/badge';
 
 const Projects = () => {
+  // Function to get badge variant based on tag content
+  const getBadgeVariant = (tag: string) => {
+    const tagLower = tag.toLowerCase();
+    if (tagLower === 'ml') return 'ml';
+    if (tagLower === 'nlp') return 'nlp';
+    if (tagLower === 'web-based') return 'web';
+    if (tagLower === 'healthcare') return 'healthcare';
+    if (tagLower === 'finance') return 'finance';
+    if (tagLower === 'travel') return 'travel';
+    if (tagLower === 'analytics') return 'analytics';
+    if (tagLower === 'automation') return 'automation';
+    return 'secondary';
+  };
   const projects = [
     {
       title: 'Currency Converter Web App',
@@ -92,7 +105,7 @@ const Projects = () => {
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, tagIndex) => (
-                    <Badge key={tagIndex} variant="secondary" className="text-xs">
+                    <Badge key={tagIndex} variant={getBadgeVariant(tag) as any} className="text-xs">
                       {tag}
                     </Badge>
                   ))}

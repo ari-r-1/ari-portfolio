@@ -15,6 +15,14 @@ const badgeVariants = cva(
         destructive:
           "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
         outline: "text-foreground",
+        ml: "border-transparent bg-blue-500/20 text-blue-300 hover:bg-blue-500/30",
+        nlp: "border-transparent bg-purple-500/20 text-purple-300 hover:bg-purple-500/30",
+        web: "border-transparent bg-green-500/20 text-green-300 hover:bg-green-500/30",
+        healthcare: "border-transparent bg-red-500/20 text-red-300 hover:bg-red-500/30",
+        finance: "border-transparent bg-yellow-500/20 text-yellow-300 hover:bg-yellow-500/30",
+        travel: "border-transparent bg-cyan-500/20 text-cyan-300 hover:bg-cyan-500/30",
+        analytics: "border-transparent bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500/30",
+        automation: "border-transparent bg-orange-500/20 text-orange-300 hover:bg-orange-500/30",
       },
     },
     defaultVariants: {
