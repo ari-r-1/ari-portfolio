@@ -1,5 +1,10 @@
 
 import { Badge } from '@/components/ui/badge';
+import financeImage from '@/assets/finance-project.jpg';
+import healthcareImage from '@/assets/healthcare-project.jpg';
+import webAutomationImage from '@/assets/web-automation-project.jpg';
+import mlNlpImage from '@/assets/ml-nlp-project.jpg';
+import travelImage from '@/assets/travel-project.jpg';
 
 const Projects = () => {
   // Function to get badge variant based on tag content
@@ -14,6 +19,17 @@ const Projects = () => {
     if (tagLower === 'analytics') return 'analytics';
     if (tagLower === 'automation') return 'automation';
     return 'secondary';
+  };
+
+  // Function to get project image based on tags
+  const getProjectImage = (tags: string[]) => {
+    const tagLower = tags.map(tag => tag.toLowerCase());
+    if (tagLower.includes('finance')) return financeImage;
+    if (tagLower.includes('healthcare')) return healthcareImage;
+    if (tagLower.includes('travel')) return travelImage;
+    if (tagLower.includes('ml') || tagLower.includes('nlp') || tagLower.includes('analytics')) return mlNlpImage;
+    if (tagLower.includes('web-based') || tagLower.includes('automation')) return webAutomationImage;
+    return financeImage; // default fallback
   };
   const projects = [
     {
@@ -93,8 +109,18 @@ const Projects = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => window.open(project.githubUrl, '_blank')}
             >
+              {/* Project image */}
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={getProjectImage(project.tags)} 
+                  alt={`${project.title} project visualization`}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+              </div>
+
               {/* Project content */}
-              <div className="p-4 md:p-6 h-full flex flex-col">
+              <div className="p-4 md:p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
                   {project.title}
                 </h3>
