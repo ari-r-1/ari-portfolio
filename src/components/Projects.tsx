@@ -1,10 +1,10 @@
 
 import { Badge } from '@/components/ui/badge';
-import { FinanceScene } from './3d/FinanceScene';
-import { HealthcareScene } from './3d/HealthcareScene';
-import { WebDevScene } from './3d/WebDevScene';
-import { MLScene } from './3d/MLScene';
-import { TravelScene } from './3d/TravelScene';
+import financeImage from '@/assets/finance-project.jpg';
+import healthcareImage from '@/assets/healthcare-project.jpg';
+import webAutomationImage from '@/assets/web-automation-project.jpg';
+import mlNlpImage from '@/assets/ml-nlp-project.jpg';
+import travelImage from '@/assets/travel-project.jpg';
 
 const Projects = () => {
   // Function to get badge variant based on tag content
@@ -21,15 +21,15 @@ const Projects = () => {
     return 'secondary';
   };
 
-  // Function to get 3D scene component based on tags
-  const get3DScene = (tags: string[]) => {
+  // Function to get project image based on tags
+  const getProjectImage = (tags: string[]) => {
     const tagLower = tags.map(tag => tag.toLowerCase());
-    if (tagLower.includes('finance')) return <FinanceScene />;
-    if (tagLower.includes('healthcare')) return <HealthcareScene />;
-    if (tagLower.includes('travel')) return <TravelScene />;
-    if (tagLower.includes('ml') || tagLower.includes('nlp') || tagLower.includes('analytics')) return <MLScene />;
-    if (tagLower.includes('web-based') || tagLower.includes('automation')) return <WebDevScene />;
-    return <FinanceScene />; // default fallback
+    if (tagLower.includes('finance')) return financeImage;
+    if (tagLower.includes('healthcare')) return healthcareImage;
+    if (tagLower.includes('travel')) return travelImage;
+    if (tagLower.includes('ml') || tagLower.includes('nlp') || tagLower.includes('analytics')) return mlNlpImage;
+    if (tagLower.includes('web-based') || tagLower.includes('automation')) return webAutomationImage;
+    return financeImage; // default fallback
   };
   const projects = [
     {
@@ -109,10 +109,14 @@ const Projects = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => window.open(project.githubUrl, '_blank')}
             >
-              {/* 3D Scene */}
+              {/* Project image */}
               <div className="relative h-48 overflow-hidden">
-                {get3DScene(project.tags)}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent pointer-events-none"></div>
+                <img 
+                  src={getProjectImage(project.tags)} 
+                  alt={`${project.title} project visualization`}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
               </div>
 
               {/* Project content */}
