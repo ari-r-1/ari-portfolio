@@ -64,6 +64,12 @@ const Projects = () => {
       description: 'Machine learning analysis for predicting customer response to Portuguese bank marketing campaigns',
       githubUrl: 'https://github.com/ari-r-1/Portuguese_Bank_Marketing_Analysis',
       tags: ['ML', 'Finance']
+    },
+    {
+      title: 'No-Churn-Telecom: Customer Churn Prediction',
+      description: 'Machine learning model for predicting customer churn in telecommunications to improve retention strategies',
+      githubUrl: 'https://github.com/ari-r-1/No-Churn-Telecom',
+      tags: ['ML', 'Analytics']
     }
   ];
 
