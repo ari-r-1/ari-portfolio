@@ -1,12 +1,49 @@
 const WorkExperience = () => {
   const experiences = [
     {
+      role: 'Data Science Intern',
+      company: 'FemtoSoft Technologies',
+      date: 'Oct 2025 – Present',
+      duration: 'Current Internship',
+      location: '',
+      logo: 'FT',
+      responsibilities: [
+        'Developed predictive analytics models using supervised and unsupervised learning for client projects',
+        'Performed data preprocessing, Exploratory Data Analysis (EDA), and feature engineering to improve model accuracy',
+        'Applied model evaluation metrics (Accuracy, F1-Score, Confusion Matrix) for performance validation'
+      ],
+      achievements: [
+        'Tools: Python, Scikit-learn, Pandas, NumPy, SQL, Flask, Web Scraping'
+      ],
+      isLeft: true
+    },
+    {
+      role: 'Data Science Intern',
+      company: 'Rubixe - AI Solutions Company',
+      date: 'Mar 2025 – Sep 2025',
+      duration: '7 Months Internship',
+      location: '',
+      logo: 'RX',
+      responsibilities: [
+        'Developed customer churn prediction model (4,617 records) achieving 97.18% accuracy with LightGBM',
+        'Conducted data preprocessing, Exploratory Data Analysis (EDA), feature engineering, and model evaluation',
+        'Built and compared Logistic Regression, Random Forest, XGBoost, LGBM models',
+        'Identified key churn drivers (international plan, call duration, voicemail) to guide retention strategy',
+        'Visualized insights using Matplotlib and Seaborn'
+      ],
+      achievements: [
+        'Project: No-Churn Telecom – Customer Churn Prediction',
+        'Tech Stack: Python, Pandas, NumPy, Scikit-learn, LightGBM, XGBoost, Matplotlib, Seaborn'
+      ],
+      isLeft: false
+    },
+    {
       role: 'Software Engineer',
       company: 'Genxlead Solutions Pvt Ltd',
       date: 'Apr 2022 – Oct 2024',
       duration: '2.5 Years Experience',
       location: 'Chennai, India',
-      logo: 'GS', // Genxlead Solutions abbreviation
+      logo: 'GS',
       responsibilities: [
         'Gained hands-on experience working with data analysis, problem-solving, email marketing and implementing data-driven solutions',
         'Contributed to projects that enhanced business operations by identifying key insights, improving efficiency, and supporting decision-making processes',
