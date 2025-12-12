@@ -30,66 +30,74 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="py-16 sm:py-20 bg-background">
-      <div className="container mx-auto px-4 sm:px-6">
+    <section id="education" className="section-padding bg-background">
+      <div className="container-responsive">
         {/* Section header */}
-        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
-          <p className="text-secondary uppercase text-sm font-semibold tracking-wider mb-4">
+        <div className="text-center mb-10 sm:mb-12 lg:mb-16 animate-fade-in">
+          <p className="text-secondary uppercase text-xs sm:text-sm font-semibold tracking-wider mb-3 sm:mb-4">
             MY JOURNEY
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 sm:mb-8">
+          <h2 className="text-section-title text-foreground mb-4 sm:mb-6">
             Education
           </h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+          <p className="text-muted-foreground text-body max-w-3xl mx-auto">
             My academic journey and educational background in engineering and data science
           </p>
         </div>
 
         {/* Timeline */}
         <div className="relative max-w-6xl mx-auto">
-          {/* Timeline line - Hidden on mobile, visible on larger screens */}
-          <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary via-accent to-accent-purple"></div>
+          {/* Timeline line - Desktop only */}
+          <div className="timeline-line"></div>
 
           {/* Timeline items */}
-          <div className="space-y-12">
+          <div className="space-y-8 lg:space-y-16">
             {education.map((edu, index) => (
               <div
                 key={index}
-                className={`relative flex items-center ${
-                  edu.isLeft ? 'lg:flex-row-reverse' : 'lg:flex-row'
-                } flex-col lg:space-x-8 mb-8 lg:mb-0`}
+                className={`relative flex flex-col lg:flex-row items-start lg:items-center ${
+                  edu.isLeft ? 'lg:flex-row-reverse' : ''
+                }`}
               >
-                {/* Timeline node with institution logo - Hidden on mobile */}
-                <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 w-16 h-16 xl:w-20 xl:h-20 bg-white rounded-full border-4 border-white items-center justify-center z-10 shadow-xl">
+                {/* Timeline node with institution logo - Desktop only */}
+                <div className="timeline-node">
                   <span className="text-blue-600 font-bold text-xs xl:text-sm">{edu.logo}</span>
                 </div>
 
-                {/* Date label */}
-                <div className={`lg:w-1/2 ${edu.isLeft ? 'lg:text-right lg:pr-20' : 'lg:pl-20'} text-center lg:text-left mb-4 lg:mb-0 flex ${edu.isLeft ? 'lg:justify-end' : 'lg:justify-start'} justify-center items-center`}>
-                  <span className="text-white font-semibold text-base sm:text-lg">
+                {/* Date label - Desktop */}
+                <div className={`hidden lg:flex lg:w-1/2 ${edu.isLeft ? 'lg:justify-end lg:pr-16 xl:pr-20' : 'lg:justify-start lg:pl-16 xl:pl-20'}`}>
+                  <span className="text-foreground font-semibold text-base lg:text-lg">
                     {edu.date}
                   </span>
                 </div>
 
                 {/* Education card */}
-                <div className={`lg:w-1/2 w-full ${edu.isLeft ? 'lg:pr-20' : 'lg:pl-20'} px-4 lg:px-0`}>
+                <div className={`w-full lg:w-1/2 ${edu.isLeft ? 'lg:pr-16 xl:pr-20' : 'lg:pl-16 xl:pl-20'}`}>
+                  {/* Mobile timeline indicator */}
+                  <div className="mobile-timeline-indicator">
+                    <div className="mobile-timeline-dot"></div>
+                    <span className="text-foreground font-semibold text-sm sm:text-base">
+                      {edu.date}
+                    </span>
+                  </div>
+
                   <div
-                    className="bg-gradient-to-br from-slate-800 via-purple-900/30 to-slate-800 rounded-2xl p-4 sm:p-6 lg:p-8 border border-slate-600 hover:border-purple-400/50 transition-all duration-500 animate-slide-in-left shadow-2xl hover:shadow-purple-500/20"
+                    className="premium-card p-4 sm:p-6 lg:p-8 card-hover animate-fade-in"
                     style={{ animationDelay: `${index * 0.2}s` }}
                   >
-                    <h3 className="text-xl font-bold text-foreground mb-2">
+                    <h3 className="text-card-title text-foreground mb-2">
                       {edu.degree}
                     </h3>
-                    <p className="text-muted-foreground mb-2 font-medium">
+                    <p className="text-muted-foreground mb-2 font-medium text-sm sm:text-base">
                       {edu.institution}
                     </p>
-                    <p className="text-sm text-accent mb-2">
+                    <p className="text-xs sm:text-sm text-accent mb-3 sm:mb-4">
                       {edu.location}
                     </p>
                     
-                    <div className="mt-4">
+                    <div className="mt-3 sm:mt-4">
                       <div className="inline-flex items-center bg-purple-900/30 border border-purple-400/30 rounded-lg px-3 py-2">
-                        <span className="text-accent-green font-semibold text-sm">
+                        <span className="text-accent-green font-semibold text-xs sm:text-sm">
                           {edu.grade}
                         </span>
                       </div>
