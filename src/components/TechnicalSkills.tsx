@@ -1,60 +1,99 @@
-import { Badge } from "@/components/ui/badge";
-
 const TechnicalSkills = () => {
-  const skills = [
-    "Python (Pandas, NumPy, NLTK, Scikit-learn)",
-    "SQL (Data Querying, Joins)",
-    "Regular Expressions (Regex)",
-    "Exploratory Data Analysis (EDA)",
-    "Data Preprocessing & Cleaning",
-    "Matplotlib, Seaborn",
-    "Excel (Formulas, Pivot Tables, Charts)",
-    "Supervised Learning (Linear Regression, Logistic Regression)",
-    "Unsupervised Learning (K-Means, Hierarchical Clustering)",
-    "Model Evaluation (Accuracy, Confusion Matrix, F1 Score)",
-    "Scikit-learn Pipeline Design",
-    "Text Preprocessing (Tokenization, Stopword Removal, Stemming)",
-    "Sentiment Analysis (NLTK)",
-    "Web Scraping (BeautifulSoup, Requests)",
-    "Feature Extraction (Bag-of-Words, TF-IDF)",
-    "Readability Scoring (FOG Index)",
-    "BI Tools"
+  const skillCategories = [
+    {
+      category: 'Programming & Data',
+      skills: [
+        'Python (Pandas, NumPy, NLTK, Scikit-learn)',
+        'SQL (Data Querying, Joins)',
+        'Regular Expressions (Regex)'
+      ]
+    },
+    {
+      category: 'Data Analysis',
+      skills: [
+        'Exploratory Data Analysis (EDA)',
+        'Data Preprocessing & Cleaning',
+        'Excel (Formulas, Pivot Tables, Charts)'
+      ]
+    },
+    {
+      category: 'Visualization',
+      skills: [
+        'Matplotlib, Seaborn',
+        'BI Tools (Tableau, Power BI)'
+      ]
+    },
+    {
+      category: 'Machine Learning',
+      skills: [
+        'Supervised Learning (Linear/Logistic Regression)',
+        'Unsupervised Learning (K-Means, Clustering)',
+        'Model Evaluation (Accuracy, F1, Confusion Matrix)',
+        'Scikit-learn Pipeline Design'
+      ]
+    },
+    {
+      category: 'NLP & Text Analysis',
+      skills: [
+        'Text Preprocessing (Tokenization, Stemming)',
+        'Sentiment Analysis (NLTK)',
+        'Feature Extraction (Bag-of-Words, TF-IDF)',
+        'Readability Scoring (FOG Index)'
+      ]
+    },
+    {
+      category: 'Web & Automation',
+      skills: [
+        'Web Scraping (BeautifulSoup, Requests)',
+        'Flask Development'
+      ]
+    }
   ];
 
   return (
-    <section id="technical-skills" className="py-20 px-4 bg-background relative overflow-hidden">
+    <section id="technical-skills" className="section-padding bg-background relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[url('/damask-pattern.svg')] bg-repeat opacity-20"></div>
       </div>
       
-      <div className="container mx-auto relative z-10">
-        <div className="text-center mb-16 animate-fade-in">
-          <p className="text-primary text-sm font-medium tracking-wider uppercase mb-4">
+      <div className="container-responsive relative z-10">
+        <div className="text-center mb-10 sm:mb-12 lg:mb-16 animate-fade-in">
+          <p className="text-primary text-xs sm:text-sm font-medium tracking-wider uppercase mb-3 sm:mb-4">
             EXPERTISE
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-section-title text-foreground mb-4 sm:mb-6">
             Technical Skills
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-body max-w-2xl mx-auto">
             A comprehensive toolkit for data science, machine learning, and analytics
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 animate-slide-in-up">
-            {skills.map((skill, index) => (
-              <div 
-                key={index}
-                className="group animate-fade-in-up p-4 md:p-6 bg-gradient-to-br from-slate-800 via-purple-900/30 to-slate-800 rounded-lg border border-slate-600 hover:border-purple-400/50 transition-all duration-500 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 touch-manipulation"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <span className="text-foreground text-sm leading-relaxed">
-                  {skill}
-                </span>
-              </div>
-            ))}
-          </div>
+        {/* Skills by category - Responsive grid */}
+        <div className="max-w-6xl mx-auto grid-responsive-2 lg:grid-cols-3">
+          {skillCategories.map((category, categoryIndex) => (
+            <div 
+              key={categoryIndex}
+              className="premium-card p-4 sm:p-5 lg:p-6 card-hover animate-fade-in"
+              style={{ animationDelay: `${categoryIndex * 0.1}s` }}
+            >
+              <h3 className="text-primary font-semibold text-sm sm:text-base mb-3 sm:mb-4 border-b border-primary/20 pb-2">
+                {category.category}
+              </h3>
+              <ul className="space-y-2 sm:space-y-3">
+                {category.skills.map((skill, skillIndex) => (
+                  <li 
+                    key={skillIndex}
+                    className="flex items-start text-foreground text-xs sm:text-sm leading-relaxed"
+                  >
+                    <span className="text-accent mr-2 mt-0.5 flex-shrink-0">▸</span>
+                    <span>{skill}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </section>
