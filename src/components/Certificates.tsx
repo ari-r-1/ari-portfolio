@@ -1,4 +1,4 @@
-import { Award } from 'lucide-react';
+import { Award, Calendar } from 'lucide-react';
 
 const Certificates = () => {
   const certificates = [
@@ -25,38 +25,38 @@ const Certificates = () => {
   ];
 
   return (
-    <section id="certificates" className="section-padding bg-background">
-      <div className="container-responsive">
+    <section id="certificates" className="py-20 px-6 lg:px-12 bg-background">
+      <div className="max-w-6xl mx-auto">
         {/* Section header */}
-        <div className="text-center mb-10 sm:mb-12 lg:mb-16 animate-fade-in">
-          <p className="text-primary text-xs sm:text-sm font-semibold tracking-wider uppercase mb-3 sm:mb-4">
+        <div className="text-center mb-16">
+          <p className="text-primary text-sm font-semibold tracking-wider uppercase mb-4">
             Professional Growth
           </p>
-          <h2 className="text-section-title text-foreground mb-4 sm:mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Certificates
           </h2>
-          <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-primary to-primary/60 mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-primary to-primary/60 mx-auto rounded-full"></div>
         </div>
 
-        {/* Certificates grid - 2 columns on tablet+, 1 on mobile */}
-        <div className="grid-responsive-2 max-w-4xl mx-auto">
+        {/* Certificates grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-4 md:gap-6">
           {certificates.map((cert, index) => {
             const IconComponent = cert.icon;
             return (
               <div
                 key={index}
-                className="group premium-card p-4 sm:p-5 lg:p-6 card-hover animate-scale-in touch-target"
+                className="group bg-gradient-to-br from-slate-800 via-purple-900/30 to-slate-800 rounded-xl p-4 md:p-6 border border-slate-600 hover:border-purple-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20 animate-scale-in touch-manipulation"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="flex items-start space-x-3 sm:space-x-4">
-                  <div className="p-2.5 sm:p-3 bg-purple-900/20 rounded-lg group-hover:bg-purple-800/30 transition-colors duration-300 flex-shrink-0">
-                    <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-purple-400" />
+                <div className="flex items-start space-x-4">
+                  <div className="p-3 bg-purple-900/20 rounded-lg group-hover:bg-purple-800/30 transition-colors duration-300">
+                    <IconComponent className="w-6 h-6 text-purple-400" />
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-sm sm:text-base lg:text-lg font-bold text-foreground mb-1 sm:mb-2 group-hover:text-purple-400 transition-colors duration-300 line-clamp-2">
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-purple-400 transition-colors duration-300">
                       {cert.title}
                     </h3>
-                    <p className="text-muted-foreground text-xs sm:text-sm">
+                    <p className="text-muted-foreground text-sm">
                       {cert.organization}
                     </p>
                   </div>
