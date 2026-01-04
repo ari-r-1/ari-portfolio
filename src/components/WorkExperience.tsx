@@ -3,17 +3,17 @@ const WorkExperience = () => {
     {
       role: 'Data Science Intern',
       company: 'FemtoSoft Technologies',
-      date: 'Oct 2025 – Present',
-      duration: 'Current Internship',
+      date: 'Oct 2025 – Nov 2025',
+      duration: '2 Months Internship',
       location: '',
       logo: 'FT',
       responsibilities: [
-        'Developed predictive analytics models using supervised and unsupervised learning for client projects',
-        'Performed data preprocessing, Exploratory Data Analysis (EDA), and feature engineering to improve model accuracy',
-        'Applied model evaluation metrics (Accuracy, F1-Score, Confusion Matrix) for performance validation'
+        'Collected and structured large-scale raw data by scraping warehouse, logistics, courier services across Tamil Nadu and restaurant details across all Chennai zones using Python, BeautifulSoup, and Requests',
+        'Performed data cleaning, preprocessing, and exploratory data analysis (EDA) to transform unstructured web data into analysis-ready datasets for market and operational insights',
+        'Generated actionable insights on service coverage, location density, business categories, and operational patterns to support decision-making and reporting'
       ],
       achievements: [
-        'Tools: Python, Scikit-learn, Pandas, NumPy, SQL, Flask, Web Scraping'
+        'Tools & Technologies: Python, BeautifulSoup, Requests, Pandas, NumPy, SQL, Excel'
       ],
       isLeft: true
     },
