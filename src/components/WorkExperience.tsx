@@ -1,6 +1,23 @@
 const WorkExperience = () => {
   const experiences = [
     {
+      role: 'Data Associate',
+      company: 'SPI Technologies India Pvt Ltd (Straive)',
+      date: 'Nov 2025 – Present',
+      duration: 'Current Role',
+      location: '',
+      logo: 'ST',
+      responsibilities: [
+        'Analyzed and transformed large-scale media datasets to ensure accuracy, consistency, and compliance, delivering analysis-ready data to support reporting and data-driven decision-making',
+        'Collaborated with cross-functional stakeholders to gather business requirements, define data rules, and generate content performance insights through validation, cleansing, and trend analysis',
+        'Leveraged Excel and SQL to uncover actionable insights, optimize data workflows, and identify patterns and quality improvements across media performance metrics'
+      ],
+      achievements: [
+        'Tools: Excel, SQL, Data Analysis, Data Validation'
+      ],
+      isLeft: true
+    },
+    {
       role: 'Data Science Intern',
       company: 'FemtoSoft Technologies',
       date: 'Oct 2025 – Nov 2025',
