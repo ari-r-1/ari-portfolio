@@ -15,7 +15,7 @@ const WorkExperience = () => {
       achievements: [
         'Tools: Excel, SQL, Data Analysis, Data Validation'
       ],
-      isLeft: true
+      isLeft: false
     },
     {
       role: 'Data Science Intern',
